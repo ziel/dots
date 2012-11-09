@@ -16,7 +16,5 @@ attrcolor s "rk"
 attrcolor b "k"
 
 bind 'r' resize
-bind 't' source .screen_top
-bind 'T' source .screen_top_done
 bind 's' split
 bind 'q' only
