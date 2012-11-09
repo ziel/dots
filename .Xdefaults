@@ -1,6 +1,6 @@
 x-terminal-emulator*foreground: #EEEEEE
 x-terminal-emulator*background: #000000
-x-terminal-emulator*font: *terminus*
+x-terminal-emulator*font: *smoothansi*
 
 xterm*reverseVideo: true
 xterm*colorRVMode: false
