@@ -1,0 +1,22 @@
+startup_message off
+vbell off
+backtick 0 1 1 date
+
+hardstatus on
+hardstatus string "%{= km}%?%` :: %t"
+
+caption always
+caption string "%{= km}%?%` :: %t"
+
+windowlist title "%{= km} >>> ;-) %="
+windowlist string "%n :: %t% %="
+
+attrcolor r "rk"
+attrcolor s "rk"
+attrcolor b "k"
+
+bind 'r' resize
+bind 't' source .screen_top
+bind 'T' source .screen_top_done
+bind 's' split
+bind 'q' only
