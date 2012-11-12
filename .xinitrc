@@ -1,3 +1,4 @@
+
 export AWT_TOOLKIT=MToolkit
 
 setxkbmap -option ctrl:nocaps
@@ -23,4 +24,8 @@ unclutter &
   synclient TapButton1=1 TapButton2=2 TapButton3=3 VertTwoFingerScroll=1 HorizTwoFingerScroll=1 EmulateTwoFingerMinZ=10 EmulateTwoFingerMinW=6
 ) &
 
+tmux new-session -d top
+tmux splitw irssi
+
+urxvt -e tmux attach &
 exec xmonad
