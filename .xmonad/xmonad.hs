@@ -142,7 +142,6 @@ myLayoutHook =
 ---
 --- Special Window Handling
 ---
--- myManageHook = composeAll . concat $
 myManageHook = composeOne
     [  className =? "MPlayer"                         -?> doFloat
     ,  className =? "Gimp"                            -?> doFloat
