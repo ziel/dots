@@ -1,0 +1,31 @@
+#!/opt/plan9/bin/9 rc
+
+. 9.rc
+
+
+fn usage {
+	echo 'find [-x regex] path regex
+		finds file paths matching regex in path,
+		optionally filtered by x switch
+		-x supply a regex to exclude from search' >[1=2]
+
+	exit usage
+}
+
+
+if (expr $#* '<' 2 > /dev/null) usage
+
+switch ($1) {
+	case -x
+		exclude = $2
+		shift; shift
+
+	case -*
+		usage
+}
+
+if (expr $#* '<' 2 > /dev/null) usage
+
+if (! ~ $exclude '') du -a $1 | grep -v $exclude | awk '/'$2'/ {print $2}'
+if not du -a $1 | awk '/'$2'/ {print $2}'
+
