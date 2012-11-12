@@ -35,6 +35,7 @@ hi VertSplit            ctermfg=0   ctermbg=233   cterm=none
 hi StatusLine           ctermfg=1   ctermbg=233   cterm=none
 hi StatusLineNC         ctermfg=11  ctermbg=233   cterm=none
 hi LineNr               ctermbg=235
+hi Comment              ctermfg=243
 
 set fillchars=fold:-
 
