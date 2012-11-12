@@ -1,0 +1,15 @@
+#!/opt/plan9/bin/9 rc
+
+. 9.rc
+
+ind = 0
+basens = /tmp/ns.`{whoami}^.:
+
+while (test -e $basens$ind) ind = `{expr $ind + 1}
+
+echo NAMESPACE'='$basens$ind
+
+mkdir $basens$ind
+NAMESPACE=$basens$ind facme $*
+
+rm -r $basens$ind

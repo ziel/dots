@@ -1,0 +1,12 @@
+#!/opt/plan9/bin/9 rc
+
+. 9.rc
+
+if (~ $* -*)
+	$PLAN9/bin/9 acme  $*
+
+if not
+	$PLAN9/bin/9 acme \
+		-f $PLAN9/font/luc/unicode.6.font \
+		-F $PLAN9/font/proggy/proggy.font \
+		-c 1 $*
