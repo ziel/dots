@@ -1,0 +1,23 @@
+gap_y -1000
+
+background no
+double_buffer yes
+out_to_console yes
+own_window yes
+own_window_type desktop
+update_interval 1.0
+
+TEXT
+^i(.dzen/bitmaps/xbm8x8/bat_full_02.xbm) \
+${battery_short BAT0} \
+^i(.dzen/bitmaps/xbm8x8/mem.xbm) \
+$memperc% \
+^i(.dzen/bitmaps/xbm8x8/cpu.xbm) \
+${cpu cpu0}% \
+${cpu cpu1}% \
+^i(.dzen/bitmaps/xbm8x8/shroom.xbm) \
+${entropy_avail}/${entropy_poolsize} \
+^fg(black) \
+^r(4x4) \
+^fg() \
+${time %b %e %H:%M:%S}
