@@ -90,7 +90,7 @@ myDmenuOpts        = "  -sb '" ++ mySelectionColor
                   ++ "' -fn '" ++ myX11Font
                   ++ "'"
 
-myDmenuCmd         = "`dmenu_path | dmenu " ++ myDmenuOpts ++ "`"
+myDmenuCmd         = "`dmenu_run " ++ myDmenuOpts ++ "`"
 myLaunchCmd        = "exe=" ++ myDmenuCmd ++ " && eval \"exec $exe\""
 
 
