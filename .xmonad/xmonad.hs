@@ -156,7 +156,7 @@ myManageHook = composeOne
     ,  className =? "Flashplayer"                     -?> doFloat
     ,  className =? "Exe"                             -?> doFloat
     ,  isFullscreen                                   -?> doFloat
-    ,  title     =? "urxvtf"                          -?> doFloat
+    ,  title     =? "furxvt"                          -?> doFloat
     ,  resource  =? "Adobe"                           -?> doFloat
     ,  resource  =? "desktop_widjow"                  -?> doIgnore
     ]
