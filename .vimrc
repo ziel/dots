@@ -59,6 +59,7 @@ au FileType java set textwidth=120|set shiftwidth=4|java set tabstop=4
 " -----------------------------------------------------------------------------
 " bundles
 " -----------------------------------------------------------------------------
+" Bundle: https://github.com/altercation/vim-colors-solarized.git
 " Bundle: https://github.com/rosstimson/scala-vim-support.git
 " Bundle: https://github.com/vim-scripts/IndexedSearch.git
 " Bundle: https://github.com/bronson/vim-trailing-whitespace.git
