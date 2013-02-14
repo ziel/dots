@@ -35,6 +35,18 @@ bindkey "^[[Z" reverse-menu-complete
 bindkey -e
 
 # -----------------------------------------
+# Check OS
+# -----------------------------------------
+function isDarwin
+{
+  if [ "$(uname)" = "Darwin" ]; then
+    return 0;
+  fi
+
+  return 1;
+}
+
+# -----------------------------------------
 # sandbox (From a&c)
 # -----------------------------------------
 if [ ! -d $HOME/d/`date +%Y`/`date +%B` ]; then
@@ -80,7 +92,7 @@ alias nautilus='nautilus --browser --no-desktop'
 # Tree defaults
 # Depends: tree, less
 function tree {
-  /usr/bin/tree -A "$@" | LESSCHARSET=IBM437 less
+  /usr/bin/env tree -A "$@" | LESSCHARSET=IBM437 less
 }
 
 # Feh Defaults
@@ -99,18 +111,17 @@ alias px='echo -n `pwd` | xclip'
 # Depends: xclip
 alias xp='cd $(xclip -o)'
 
-# Synaptics Trackpad Control
-# Depends: synclient
-alias trackon='synclient TouchpadOff=0'
-alias trackoff='synclient TouchpadOff=1'
+# Synclient aliases
+if which synclient > /dev/null; then
+    alias trackon='synclient TouchpadOff=0'
+    alias trackoff='synclient TouchpadOff=1'
+fi
 
-# Desktop clipboard to X clipboard
-# Depends: xclip
-alias c2x='xclip -o -selection clipboard | xclip'
-
-# X clipboard to desktop clipboard
-# Depends: xclip
-alias x2c='xclip -o | xclip -selection clipboard'
+# XClip aliases
+if which xclip > /dev/null; then
+    alias c2x='xclip -o -selection clipboard | xclip'
+    alias x2c='xclip -o | xclip -selection clipboard'
+fi
 
 # Goldielocs
 # Depends: goldielocs
@@ -132,9 +143,9 @@ function fmsg {
 # prompt and term title
 # -----------------------------------------
 function title {
-    if [[ $TERM == "xterm" 
-       || $TERM == "rxvt" 
-       || $TERM == "rxvt-unicode" 
+    if [[ $TERM == "xterm"
+       || $TERM == "rxvt"
+       || $TERM == "rxvt-unicode"
        ]]; then
         print -n "\e]0;$*\a"
     fi
@@ -164,10 +175,24 @@ export PAGER=/usr/bin/less
 export MYSQL_PS1='\n\D\n\u@\h [\d]> '
 export LESSEDIT=vim
 export LESS='-r -S -F -X -P %lt/%m (%p/100)'
-export PLAN9=/opt/plan9
+
+# stopgap for Darwin
+# todo: check and assign
+if [ isDarwin ]; then
+    export PLAN9=/Users/canaan/projects/gray/plan9port
+else
+    export PLAN9=/opt/plan9
+fi
+
+# stopgap for Darwin
+# todo: check and assign
+if [ isDarwin ]; then
+    alias vim=/usr/local/bin/vim
+fi
 
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:$HOME/.gem/ruby/1.9.1/bin
 export PATH=$PATH:$HOME/node_modules/jasmine-node/bin
@@ -175,11 +200,19 @@ export PATH=$PATH:$HOME/node_modules/jasmine-node/bin
 export GOBIN=$HOME/bin
 export GOPATH=$HOME/lib/golib
 
+# rbenv setup
+if which rbenv > /dev/null; then
+    eval "$(rbenv init -)"
+fi
+
 # -----------------------------------------
 # welcome message
 # -----------------------------------------
 
-acpi
+if which acpi > /dev/null; then
+    acpi
+fi
+
 date '+%H and %M'
 9 fortune
 echo
