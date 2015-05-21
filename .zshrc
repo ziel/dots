@@ -70,6 +70,11 @@ alias favg='perl -e "\$c=0;\$s=0;while(<>){chomp;\$c=\$c+1;\$s+=\$_;}\$a=\$s/\$c
 eval $(keychain -q --nogui --eval id_rsa 2>/dev/null)
 
 # -----------------------------------------
+# git utils
+# -----------------------------------------
+alias lgtoday='git log --since=6:00AM --author=ziel'
+
+# -----------------------------------------
 # aliases
 # -----------------------------------------
 
@@ -133,6 +138,11 @@ function goldielocs {
 # Depends: goldielocs
 alias 2='goldielocs t'
 
+# Golang path & deps management
+# gvp in and out
+alias gvpi='source gvp in'
+alias gvpo='source gvp out'
+
 # Figlet banner
 # Depends: figlet
 function fmsg {
@@ -174,28 +184,20 @@ export EDITOR=/usr/bin/vim
 export PAGER=/usr/bin/less
 export MYSQL_PS1='\n\D\n\u@\h [\d]> '
 export LESSEDIT=vim
-export LESS='-r -S -F -X -P %lt/%m (%p/100)'
+export LESS='-R -S -F -X -P %lt/%m (%p/100)'
+export PLAN9=/opt/plan9
 
 # stopgap for Darwin
 # todo: check and assign
 if [ isDarwin ]; then
-    export PLAN9=/Users/canaan/projects/gray/plan9port
-else
-    export PLAN9=/opt/plan9
-fi
-
-# stopgap for Darwin
-# todo: check and assign
-if [ isDarwin ]; then
-    alias vim=/usr/local/bin/vim
+    source $HOME/.zshrc.osx
 fi
 
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:$PLAN9/bin
-export PATH=$PATH:$HOME/.gem/ruby/1.9.1/bin
-export PATH=$PATH:$HOME/node_modules/jasmine-node/bin
+export PATH=$PATH:/usr/local/share/npm/bin
 
 export GOBIN=$HOME/bin
 export GOPATH=$HOME/lib/golib
@@ -216,4 +218,7 @@ fi
 date '+%H and %M'
 9 fortune
 echo
+
+# local extras
+source $HOME/.zshrc.local
 
