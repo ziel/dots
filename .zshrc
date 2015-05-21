@@ -187,12 +187,6 @@ export LESSEDIT=vim
 export LESS='-R -S -F -X -P %lt/%m (%p/100)'
 export PLAN9=/opt/plan9
 
-# stopgap for Darwin
-# todo: check and assign
-if [ isDarwin ]; then
-    source $HOME/.zshrc.osx
-fi
-
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/sbin
@@ -208,6 +202,18 @@ if which rbenv > /dev/null; then
 fi
 
 # -----------------------------------------
+# Extras
+# -----------------------------------------
+
+# Extras for OSX
+if [ isDarwin ]; then
+    source $HOME/.zshrc.osx
+fi
+
+# Extras for local machine
+source $HOME/.zshrc.local
+
+# -----------------------------------------
 # welcome message
 # -----------------------------------------
 
@@ -218,7 +224,4 @@ fi
 date '+%H and %M'
 9 fortune
 echo
-
-# local extras
-source $HOME/.zshrc.local
 
