@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+readonly ARGS="$*"
+readonly CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+
+# Shortcuts go here
+# ---------------------------------
+declare -A SHORTCUTS=(
+  ["twdk"]="https://tweetdeck.twitter.com/"
+  ["tweetdeck"]="https://tweetdeck.twitter.com/"
+
+  ["msgr"]="https://www.messenger.com/"
+  ["messenger"]="https://www.messenger.com/"
+)
+# ---------------------------------
+
+process_args() {
+  local result="${SHORTCUTS["${ARGS}"]}"
+
+  if [ -z "${result}" ]; then
+    result="${ARGS}"
+  fi
+
+  echo "${result}"
+}
+
+main () {
+  "${CHROME}" --app="$(process_args)"
+}
+
+main
