@@ -39,11 +39,12 @@ bindkey -e
 # -----------------------------------------
 function isDarwin
 {
-  if [ "$(uname)" = "Darwin" ]; then
-    return 0;
-  fi
+  [ "$(uname)" = "Darwin" ]
+}
 
-  return 1;
+function isLinux
+{
+  [ "$(uname)" = "Linux" ]
 }
 
 # -----------------------------------------
@@ -180,7 +181,7 @@ export PROMPT="%# "
 unset LS_COLORS
 
 export AWT_TOOLKIT=MToolkit
-export EDITOR=/usr/bin/vim
+export EDITOR=vim
 export PAGER=/usr/bin/less
 export MYSQL_PS1='\n\D\n\u@\h [\d]> '
 export LESSEDIT=vim
@@ -206,8 +207,13 @@ fi
 # -----------------------------------------
 
 # Extras for OSX
-if [ isDarwin ]; then
+if isDarwin; then
     source $HOME/.zshrc.osx
+fi
+
+# Extras for Linux
+if isLinux; then
+    source $HOME/.zshrc.linux
 fi
 
 # Extras for local machine

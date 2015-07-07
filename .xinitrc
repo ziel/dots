@@ -7,17 +7,15 @@ setxkbmap -option terminate:ctrl_alt_bksp
 xrdb $HOME/.Xdefaults
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#222222'
-feh --bg-center $HOME/.background.png
+xsetroot -solid '#111111'
 
 xset -b
 xset +fp /usr/share/fonts/artwiz-fonts
 xset +fp /usr/share/fonts/local
 
-xcompmgr &
 unclutter &
 
-/usr/lib/gnome-settings-daemon/gnome-settings-daemon &
+# /usr/lib/gnome-settings-daemon/gnome-settings-daemon &
 
 (
   sleep 5;
@@ -25,7 +23,6 @@ unclutter &
 ) &
 
 tmux new-session -d top
-tmux splitw irssi
+urxvt &
 
-urxvt -e tmux attach &
 exec xmonad

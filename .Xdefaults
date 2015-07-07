@@ -1,6 +1,6 @@
-x-terminal-emulator*foreground: #EEEEEE
-x-terminal-emulator*background: #000000
-x-terminal-emulator*font: *smoothansi*
+x-terminal-emulator*foreground: #BBBBCC
+x-terminal-emulator*background: #111111
+x-terminal-emulator*font: *terminus*
 
 xterm*reverseVideo: true
 xterm*colorRVMode: false
@@ -8,25 +8,22 @@ xterm*highlightColor: #000000
 
 XTerm*eightBitInput: false
 XTerm*foreground: #BBBBCC
-XTerm*background: #333333
+XTerm*background: #111111
 XTerm*font: *terminus*
 XTerm*visualBell: False
 XTerm*cursorColor: #000000
 
-Rxvt*scrollBar: false
-Rxvt*highlightColor: #000000
-Rxvt*highlightColor2: #000000
-Rxvt*foreground: #BBBBCC
-Rxvt*background: #333333
-Rxvt*font: *smoothansi*
-Rxvt*boldFont: *smoothansi*
-Rxvt*visualBell: False
-Rxvt*cursorColor: #000000
-Rxvt*cursorColor2: #AA77AA
-Rxvt*colorBD: #777777
-
-URxvt*depth: 32
-URxvt*background: rgba:1111/1111/1111/5555
+URxvt*scrollBar: false
+URxvt*highlightColor: #000000
+URxvt*highlightColor2: #000000
+URxvt*foreground: #BBBBCC
+URxvt*background: #111111
+URxvt*font: *terminus*
+URxvt*boldFont: *terminus*
+URxvt*visualBell: False
+URxvt*cursorColor: #000000
+URxvt*cursorColor2: #AA77AA
+URxvt*colorBD: #777777
 
 xdvi*expert: True
 xdvi*geometry: 800x600
