@@ -11,3 +11,7 @@ unset -f tree
 # This seems to be wanted on OSX
 export TERM=xterm-256color
 
+# 9 for OSX
+export PLAN9=/opt/plan9
+export PATH=$PATH:$PLAN9/bin
+

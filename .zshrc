@@ -186,12 +186,10 @@ export PAGER=/usr/bin/less
 export MYSQL_PS1='\n\D\n\u@\h [\d]> '
 export LESSEDIT=vim
 export LESS='-R -S -F -X -P %lt/%m (%p/100)'
-export PLAN9=/opt/plan9
 
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:$PLAN9/bin
 export PATH=$PATH:/usr/local/share/npm/bin
 
 export GOBIN=$HOME/bin
