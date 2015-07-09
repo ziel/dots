@@ -91,16 +91,6 @@ alias tx="tmux attach &> /dev/null || tmux"
 # Depends: poppler
 alias ptx="pdftotext -nopgbrk -layout"
 
-# Nautilus Defaults
-# Depends: nautilus
-alias nautilus='nautilus --browser --no-desktop'
-
-# Tree defaults
-# Depends: tree, less
-function tree {
-  /usr/bin/env tree -A "$@" | LESSCHARSET=IBM437 less
-}
-
 # Feh Defaults
 # Depends: feh
 alias feh='feh --zoom-button 3 --menu-button 2 -Bblack'
