@@ -22,8 +22,8 @@ import XMonad.Layout.NoBorders
 -- General
 --
 
-myTerminal         = "urxvt"
-myX11Font          = "anorexia"
+myTerminal         = "urxvtc"
+myX11Font          = "anorexia:pixelsize=11"
 myWorkspaces       = ["2.7","182","818","284","590","452","353","602","874"]
 
 --
@@ -92,6 +92,7 @@ myDmenuOpts        = "  -sb '" ++ mySelectionColor
 
 myDmenuCmd         = "`dmenu_run " ++ myDmenuOpts ++ "`"
 myLaunchCmd        = "exe=" ++ myDmenuCmd ++ " && eval \"exec $exe\""
+myInvertCmd        = "xcalib -invert -alter"
 
 
 --
@@ -101,6 +102,7 @@ myKeys =
   [ ("M-S-t", sinkAll)
   , ("M-<Return>", promote)
   , ("M-p", spawn myLaunchCmd)
+  , ("M-i", spawn myInvertCmd)
   , ("M-S-b", sendMessage ToggleStruts)
   , ("M-<Space>", sendMessage TL.ToggleLayout)
   , ("M-S-<Space>", sendMessage NextLayout) ]
