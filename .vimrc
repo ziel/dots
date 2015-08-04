@@ -20,6 +20,7 @@ set shiftwidth=2
 set tabstop=2
 set textwidth=0
 set mouse=a
+set spellcapcheck=
 
 " invoke filetype stuff
 filetype on
