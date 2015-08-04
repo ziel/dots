@@ -1,2 +1,6 @@
 #!/bin/sh
-/opt/plan9/bin/9 9term -f $PLAN9/font/fixed/unicode.6x13.font rc -l
+
+/usr/bin/env 9 9term -f $PLAN9/font/lucsans/typeunicode.6.font rc -l
+
+# Alt ok fonts:
+#/usr/bin/env 9 9term -f $PLAN9/font/fixed/unicode.6x13.font rc -l
