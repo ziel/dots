@@ -92,14 +92,28 @@ myDmenuOpts        = "  -sb '" ++ mySelectionColor
 
 myDmenuCmd         = "`dmenu_run " ++ myDmenuOpts ++ "`"
 myLaunchCmd        = "exe=" ++ myDmenuCmd ++ " && eval \"exec $exe\""
+
+--
+-- Screen Color Inverter
+--
 myInvertCmd        = "xcalib -invert -alter"
 
+--
+-- Floating Term Launcher
+--
+myFurxvtcOpts      = " -title furxvt"
+                  ++ " -depth 32"
+                  ++ " -geometry 170x15+0+80"
+                  ++ " -bg rgba:0000/0000/0000/DDDD"
+
+myFurxvt           = "urxvtc" ++ myFurxvtcOpts
 
 --
 -- Key Bindings
 --
 myKeys =
   [ ("M-S-t", sinkAll)
+  , ("M-C-f", spawn myFurxvt)
   , ("M-<Return>", promote)
   , ("M-p", spawn myLaunchCmd)
   , ("M-i", spawn myInvertCmd)

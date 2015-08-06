@@ -13,8 +13,9 @@ xrdb $HOME/.Xdefaults
 setxkbmap -option ctrl:nocaps
 setxkbmap -option terminate:ctrl_alt_bksp
 
+compton -b
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#111111'
+hsetroot -solid '#111111'
 
 xset -b
 xset +fp /usr/share/fonts/artwiz-fonts
