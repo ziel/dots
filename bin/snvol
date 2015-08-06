@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# snvol is Simple Notifying Volume Control
+# intended for use with xbindkeys and pamixer
+# (c)ziel
+# I'll stick a foss license on this silliness at some point
+# right now I just need volume control ;-)
+
+notify()
+{
+  vol=$(pamixer --get-vol)
+
+  if [ "$(pamixer --get-mute)" = "true" ];
+  then
+    vol=0
+  fi
+
+  notify-send -h 'int:value:'${vol} Vol
+}
+
+main()
+{
+  case $1 in
+
+    increase)
+      pamixer --increase $2 && notify
+      ;;
+
+    decrease)
+      pamixer --decrease $2 && notify
+      ;;
+
+    toggle-mute)
+      pamixer --toggle-mute && notify
+      ;;
+
+  esac
+}
+
+main $@;

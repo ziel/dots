@@ -22,6 +22,7 @@ xset +fp /usr/share/fonts/artwiz-fonts
 xset +fp /usr/share/fonts/local
 xrandr --dpi 75
 
+xbindkeys
 urxvtd -q -f -o
 unclutter &
 
