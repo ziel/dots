@@ -23,7 +23,8 @@ import XMonad.Layout.NoBorders
 --
 
 myTerminal         = "urxvtc"
-myX11Font          = "anorexia:pixelsize=11"
+myX11Font          = "anorexia"
+myXFTFont          = "anorexia:pixelsize=11"
 myWorkspaces       = ["2.7","182","818","284","590","452","353","602","874"]
 
 --
@@ -42,7 +43,7 @@ myBorderWidth      = 1
 -- DZzen Status and Monitor Bars
 --
 
-myDzenOpts         = "  -fn '" ++ myX11Font
+myDzenOpts         = "  -fn '" ++ myXFTFont
                   ++ "' -bg '" ++ myBGColorLight
                   ++ "' -fg '" ++ myFGColorLight
                   ++ "'"
