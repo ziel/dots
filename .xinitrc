@@ -13,7 +13,7 @@ xrdb $HOME/.Xdefaults
 setxkbmap -option ctrl:nocaps
 setxkbmap -option terminate:ctrl_alt_bksp
 
-compton -b
+compton -b -c --shadow-exclude '! name *?= "fsmlurxvt"'
 xsetroot -cursor_name left_ptr
 hsetroot -solid '#111111'
 

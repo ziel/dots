@@ -83,6 +83,10 @@ alias lgtoday='git log --since=6:00AM --author=ziel'
 # Depends: screen
 alias sx="screen -x &> /dev/null || screen"
 
+# Create a top in a screen
+# Depends: screen, top
+alias st="screen top"
+
 # Attach to or create a tmux session
 # Depends: tmux
 alias tx="tmux attach &> /dev/null || tmux"

@@ -104,10 +104,20 @@ myInvertCmd        = "xcalib -invert -alter"
 --
 myFurxvtcOpts      = " -title furxvt"
                   ++ " -depth 32"
-                  ++ " -geometry 170x15+0+80"
+                  ++ " -geometry 170x15+0+350"
                   ++ " -bg rgba:0000/0000/0000/DDDD"
+                  ++ " -cr rgba:5555/0000/3333/EEEE"
+
+myFSMLurxvtcOpts   = " -title fsmlurxvt"
+                  ++ " -b 7"
+                  ++ " -depth 32"
+                  ++ " -bd rgba:0000/0000/0000/CCCC"
+                  ++ " -bg rgba:0000/0000/0000/8888"
+                  ++ " -cr rgba:5555/0000/3333/EEEE"
+                  ++ " -geometry 110x15+300+39"
 
 myFurxvt           = "urxvtc" ++ myFurxvtcOpts
+myFSMLurxvt        = "urxvtc" ++ myFSMLurxvtcOpts
 
 --
 -- Key Bindings
@@ -115,6 +125,7 @@ myFurxvt           = "urxvtc" ++ myFurxvtcOpts
 myKeys =
   [ ("M-S-t", sinkAll)
   , ("M-C-f", spawn myFurxvt)
+  , ("M-C-g", spawn myFSMLurxvt)
   , ("M-<Return>", promote)
   , ("M-p", spawn myLaunchCmd)
   , ("M-i", spawn myInvertCmd)
@@ -174,6 +185,7 @@ myManageHook = composeOne
     ,  className =? "Exe"                             -?> doFloat
     ,  isFullscreen                                   -?> doFloat
     ,  title     =? "furxvt"                          -?> doFloat
+    ,  title     =? "fsmlurxvt"                       -?> doFloat
     ,  resource  =? "Adobe"                           -?> doFloat
     ,  resource  =? "desktop_widjow"                  -?> doIgnore
     ]
