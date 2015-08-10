@@ -1,2 +1,0 @@
-#!/bin/sh
-urxvt -name furxvt -bg rgba:2222/2222/2222/EEEE -bd rgba:0000/0000/0000/FFFF -geometry 90x20+140+100
