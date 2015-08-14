@@ -1,0 +1,2 @@
+u javascript:void%20function(){document.documentElement.style.webkitFilter=%22invert(0%25)%22}();
+i javascript:void%20function(){document.documentElement.style.webkitFilter=%22invert(100%25)%22}();
