@@ -102,13 +102,13 @@ myInvertCmd        = "xcalib -invert -alter"
 --
 -- Floating Term Launcher
 --
-myFurxvtcOpts      = " -title furxvt"
+myFurxvtcOpts      = " -name furxvt"
                   ++ " -depth 32"
                   ++ " -geometry 170x15+0+350"
                   ++ " -bg rgba:0000/0000/0000/DDDD"
                   ++ " -cr rgba:5555/0000/3333/EEEE"
 
-myFSMLurxvtcOpts   = " -title fsmlurxvt"
+myFSMLurxvtcOpts   = " -name fsmlurxvt"
                   ++ " -b 7"
                   ++ " -depth 32"
                   ++ " -bd rgba:0000/0000/0000/CCCC"
@@ -184,8 +184,8 @@ myManageHook = composeOne
     ,  className =? "Flashplayer"                     -?> doFloat
     ,  className =? "Exe"                             -?> doFloat
     ,  isFullscreen                                   -?> doFloat
-    ,  title     =? "furxvt"                          -?> doFloat
-    ,  title     =? "fsmlurxvt"                       -?> doFloat
+    ,  title =? "furxvt"                              -?> doFloat
+    ,  title =? "fsmlurxvt"                           -?> doFloat
     ,  resource  =? "Adobe"                           -?> doFloat
     ,  resource  =? "desktop_widjow"                  -?> doIgnore
     ]
