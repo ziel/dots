@@ -1,0 +1,9 @@
+source "gpg -dq $HOME//mutt.local.gpg |"
+
+color error     red   default
+color message   cyan  default
+color indicator cyan  red
+color status    cyan  black
+color tree      red   default
+color search    cyan  black
+color markers   red   default
