@@ -6,3 +6,5 @@ export PATH=$PATH:$HOME/.npm/bin
 export PLAN9=/usr/lib/plan9
 export PATH=$PATH:$PLAN9/bin
 
+# my mupdf fork
+alias mupdf="/usr/local/bin/mupdf-x11 -inB 111111"
