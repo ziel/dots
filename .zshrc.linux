@@ -6,5 +6,8 @@ export PATH=$PATH:$HOME/.npm/bin
 export PLAN9=/usr/lib/plan9
 export PATH=$PATH:$PLAN9/bin
 
+# Qt Style
+export QT_STYLE_OVERRIDE='Gtk+'
+
 # my mupdf fork
 alias mupdf="/usr/local/bin/mupdf-x11 -inB 111111"
