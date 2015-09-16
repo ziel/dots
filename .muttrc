@@ -1,4 +1,4 @@
-source "gpg -dq $HOME//mutt.local.gpg |"
+source "gpg -dq $HOME/.mutt.pw.gpg |"
 
 color error     red   default
 color message   cyan  default
@@ -7,3 +7,22 @@ color status    cyan  black
 color tree      red   default
 color search    cyan  black
 color markers   red   default
+
+set imap_user         = $my_usr
+set imap_pass         = $my_pwd
+set folder            = imaps://$my_imap_host/
+set spoolfile         = +INBOX
+mailboxes             = +INBOX
+
+set header_cache      = ~/.cache/mutt
+set message_cachedir  = ~/.cache/mutt
+set imap_keepalive    = 300
+set mail_check        = 120
+
+set from              = $imap_user
+set use_from          = yes
+set realname          = $my_nam
+set smtp_url          = smtp://$imap_user:$imap_pass@$my_smtp_host/
+set ssl_force_tls     = yes
+unset record
+
