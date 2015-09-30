@@ -128,4 +128,5 @@ let g:airline_theme = 'serene'
 " Bundle: https://github.com/majutsushi/tagbar.git
 " Bundle: https://github.com/cstrahan/vim-capnp.git
 " Bundle: https://github.com/ardagnir/united-front.git
-
+" Bundle: https://github.com/reedes/vim-pencil
+" Bundle: https://github.com/junegunn/goyo.vim
