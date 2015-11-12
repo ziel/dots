@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ssconvert -T Gnumeric_stf:stf_assistant $1 fd://1 | column -s, -t
