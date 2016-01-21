@@ -1,12 +1,14 @@
+# -------------------------------------------------------------------------
+# (o)>#|#<.>(o)>#|#<.>(o)>#|#<.>(o)>#|#<.>(o)>#|#<.>(o)>#|#<.>(o)>#|#<.>(o)
+# -------------------------------------------------------------------------
+# OSX Specials
+# -------------------------------------------------------------------------
 
 # Homebrew vim
 alias vim=/usr/local/bin/vim
 
-# Personal fork of htop
+# Use personal fork of htop
 alias htop="$HOME/bin/htop"
-
-# Kill tree (nogud on osx)
-unset -f tree
 
 # This seems to be wanted on OSX
 export TERM=xterm-256color

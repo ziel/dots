@@ -1,3 +1,8 @@
+# -------------------------------------------------------------------------
+# (o)>#|#<.>(o)>#|#<.>(o)>#|#<.>(o)>#|#<.>(o)>#|#<.>(o)>#|#<.>(o)>#|#<.>(o)
+# -------------------------------------------------------------------------
+# Linux Specials
+# -------------------------------------------------------------------------
 
 # Saferish node
 export PATH=$PATH:$HOME/.npm/bin
@@ -6,8 +11,39 @@ export PATH=$PATH:$HOME/.npm/bin
 export PLAN9=/usr/lib/plan9
 export PATH=$PATH:$PLAN9/bin
 
-# Qt Style
+# QT Style
 export QT_STYLE_OVERRIDE='Gtk+'
 
-# my mupdf fork
+# Use personal fork of mupdf
 alias mupdf="/usr/local/bin/mupdf-x11 -inB 111111"
+
+# Feh Defaults
+# Depends: feh
+alias feh='feh -Bblack'
+
+# XClip aliases and hilarity
+# Depends: xclip
+if which xclip > /dev/null; then
+
+    # Clipboard flipping
+    alias c2x='xclip -o -selection clipboard | xclip'
+    alias x2c='xclip -o | xclip -selection clipboard'
+
+    # Clipboard access
+    alias xclipb='xclip -selection clipboard'
+
+    # Copy current path
+    alias px='echo -n `pwd` | xclip'
+
+    # Go to to whatever's in xclip
+    alias xp='cd $(xclip -o)'
+fi
+
+# Synclient aliases
+# Depends: synclient
+if which synclient > /dev/null; then
+    alias trackon='synclient TouchpadOff=0'
+    alias trackoff='synclient TouchpadOff=1'
+fi
+
+

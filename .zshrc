@@ -71,13 +71,13 @@ alias favg='perl -e "\$c=0;\$s=0;while(<>){chomp;\$c=\$c+1;\$s+=\$_;}\$a=\$s/\$c
 eval $(keychain -q --nogui --eval id_rsa 2>/dev/null)
 
 # -----------------------------------------
-# git utils
-# -----------------------------------------
-alias lgtoday='git log --since=6:00AM --author=ziel'
-
-# -----------------------------------------
 # aliases
 # -----------------------------------------
+
+# Git log aliases
+# Depends: git, diffstat
+alias lgtoday='git log --since=6:00AM --author=ziel'
+alias lgsttoday='lgtoday -p | diffstat'
 
 # Attach to or create an screen session
 # Depends: screen
@@ -95,33 +95,9 @@ alias tx="tmux attach &> /dev/null || tmux"
 # Depends: poppler
 alias ptx="pdftotext -nopgbrk -layout"
 
-# Feh Defaults
-# Depends: feh
-alias feh='feh --zoom-button 3 --menu-button 2 -Bblack'
-
 # Recursive copy, skipping dotfiles.
 # Depends: rsync
 alias cpr="rsync -av -f '- .*'"
-
-# Put the CWD into the clipboard
-# Depends: xclip
-alias px='echo -n `pwd` | xclip'
-
-# Change dir to whatever's in the clipboard
-# Depends: xclip
-alias xp='cd $(xclip -o)'
-
-# Synclient aliases
-if which synclient > /dev/null; then
-    alias trackon='synclient TouchpadOff=0'
-    alias trackoff='synclient TouchpadOff=1'
-fi
-
-# XClip aliases
-if which xclip > /dev/null; then
-    alias c2x='xclip -o -selection clipboard | xclip'
-    alias x2c='xclip -o | xclip -selection clipboard'
-fi
 
 # Goldielocs
 # Depends: goldielocs
@@ -134,9 +110,11 @@ function goldielocs {
 alias 2='goldielocs t'
 
 # Golang path & deps management
-# gvp in and out
-alias gvpi='source gvp in'
-alias gvpo='source gvp out'
+# Depends: gvp
+if which xclip > /dev/null; then
+    alias gvpi='source gvp in'
+    alias gvpo='source gvp out'
+fi
 
 # Figlet banner
 # Depends: figlet
