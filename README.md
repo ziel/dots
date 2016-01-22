@@ -1,4 +1,5 @@
 Conf
 ====
 
-Conf stuff I use a lot. ymmv
+dot files... mostly for cli stuff. ymmv <br>
+updated whimsically
