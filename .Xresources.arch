@@ -1,0 +1,4 @@
+XTerm*font: *terminesspowerline*
+URxvt*font: *terminesspowerline*
+URxvt*boldFont: *terminesspowerline*
+

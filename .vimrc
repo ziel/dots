@@ -64,25 +64,17 @@ nmap <silent> <leader>D <Plug>DashGlobalSearch
 " quick filetype hacks for tabs vs spaces
 au FileType *    set expandtab|set tabstop=2|set shiftwidth=2|set softtabstop=2
 au FileType go   set noexpandtab|set tabstop=4|set shiftwidth=4|set softtabstop=4
+au FileType make   set noexpandtab|set tabstop=4|set shiftwidth=4|set softtabstop=4
 au FileType java set textwidth=120|set shiftwidth=4|set tabstop=4
 
 map <F8> :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " airline config
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_powerline_fonts = 1
 let g:airline_theme = 'serene'
+
+" vim-go config
+let g:go_fmt_command = "goimports"
 
 " -----------------------------------------------------------------------------
 " bundles (disabled)
@@ -96,6 +88,7 @@ let g:airline_theme = 'serene'
 " # Bundle: https://github.com/SirVer/ultisnips.git
 " # Bundle: https://github.com/vim-scripts/xemacs-mouse-drag-copy.git
 " # Bundle: https://github.com/Rip-Rip/clang_complete
+" # Bundle: https://github.com/scrooloose/nerdcommenter.git
 
 " -----------------------------------------------------------------------------
 " bundles
@@ -105,7 +98,6 @@ let g:airline_theme = 'serene'
 " Bundle: https://github.com/rosstimson/scala-vim-support.git
 " Bundle: https://github.com/bronson/vim-trailing-whitespace.git
 " Bundle: https://github.com/tpope/vim-vividchalk.git
-" Bundle: https://github.com/scrooloose/nerdcommenter.git
 " Bundle: https://github.com/tpope/vim-surround.git
 " Bundle: https://github.com/vim-scripts/taglist.vim
 " Bundle: https://github.com/vim-scripts/Align.git
@@ -116,15 +108,17 @@ let g:airline_theme = 'serene'
 " Bundle: https://github.com/vim-scripts/Skittles-Dark.git
 " Bundle: https://github.com/scrooloose/nerdtree.git
 " Bundle: https://github.com/vim-scripts/nginx.vim.git
-" Bundle: https://github.com/vim-scripts/Conque-Shell.git
 " Bundle: https://github.com/kchmck/vim-coffee-script.git
 " Bundle: https://github.com/tpope/vim-markdown
 " Bundle: https://github.com/rizzatti/dash.vim
 " Bundle: https://github.com/Keithbsmiley/swift.vim.git
 " Bundle: https://github.com/vim-scripts/logstash.vim.git
 " Bundle: https://github.com/fatih/vim-go.git
-" Bundle: https://github.com/Shougo/neocomplete.vim.git
-" Bundle: https://github.com/Shougo/neosnippet.vim.git
+" Bundle: https://github.com/shougo/neocomplete.vim.git
+" Bundle: https://github.com/shougo/neosnippet.vim.git
+" Bundle: https://github.com/shougo/unite.vim
+" Bundle: https://github.com/shougo/vimproc.vim
+" Bundle: https://github.com/shougo/vimshell.vim
 " Bundle: https://github.com/majutsushi/tagbar.git
 " Bundle: https://github.com/cstrahan/vim-capnp.git
 " Bundle: https://github.com/ardagnir/united-front.git
