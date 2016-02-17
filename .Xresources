@@ -27,3 +27,5 @@ URxvt*colorBD: #777777
 
 xdvi*expert: True
 xdvi*geometry: 800x600
+
+#include ".Xresources.solarized"
