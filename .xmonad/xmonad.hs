@@ -175,6 +175,7 @@ myManageHook = composeOne
     ,  className =? "Gimp"                            -?> doFloat
     ,  className =? "Firefox"                         -?> doF (W.shift "874")
     ,  className =? "google-chrome"                   -?> doF (W.shift "874")
+    ,  className =? "qutebrowser"                     -?> doF (W.shift "874")
     ,  className =? "Xfce4-notifyd"                   -?> doIgnore
     ,  className =? "Conky"                           -?> doFloat
     ,  className =? "Nautilus"                        -?> doFloat
