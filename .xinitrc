@@ -10,7 +10,7 @@ export GTK_THEME=Adwaita
 export AWT_TOOLKIT=MToolkit
 xrdb $HOME/.Xresources
 
-if (uname -a | grep -q ARCH); then
+if (grep -q Arch /etc/issue); then
 	xrdb -merge $HOME/.Xresources.arch
 fi
 
