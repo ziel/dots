@@ -71,7 +71,8 @@ map <F8> :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " airline config
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'serene'
+let g:airline_theme = 'behelit'
+let g:airline#extensions#tmuxline#enabled = 0
 
 " vim-go config
 let g:go_fmt_command = "goimports"
@@ -89,11 +90,13 @@ let g:go_fmt_command = "goimports"
 " # Bundle: https://github.com/vim-scripts/xemacs-mouse-drag-copy.git
 " # Bundle: https://github.com/Rip-Rip/clang_complete
 " # Bundle: https://github.com/scrooloose/nerdcommenter.git
+" # Bundle: https://github.com/edkolev/tmuxline.vim
 
 " -----------------------------------------------------------------------------
 " bundles
 " -----------------------------------------------------------------------------
-" Bundle: https://github.com/bling/vim-airline
+" Bundle: https://github.com/vim-airline/vim-airline
+" Bundle: https://github.com/vim-airline/vim-airline-themes
 " Bundle: https://github.com/altercation/vim-colors-solarized.git
 " Bundle: https://github.com/rosstimson/scala-vim-support.git
 " Bundle: https://github.com/bronson/vim-trailing-whitespace.git
