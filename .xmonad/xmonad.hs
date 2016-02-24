@@ -112,7 +112,7 @@ myFSMLurxvtcOpts   = " -name fsmlurxvt"
                   ++ " -b 7"
                   ++ " -depth 32"
                   ++ " -bd rgba:0000/0000/0000/CCCC"
-                  ++ " -bg rgba:0000/0000/0000/8888"
+                  ++ " -bg rgba:0000/0000/0000/CCCC"
                   ++ " -cr rgba:5555/0000/3333/EEEE"
                   ++ " -geometry 110x15+300+39"
 
