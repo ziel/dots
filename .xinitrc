@@ -19,7 +19,7 @@ setxkbmap -option terminate:ctrl_alt_bksp
 
 hsetroot -solid '#111111'
 xsetroot -cursor_name left_ptr
-compton -b -c --shadow-exclude '! class_i *?= "fsmlurxvt"' -l -7 -t -7 -r 5
+compton -b -c --shadow-exclude '! class_i *?= "fsmlurxvt"' -l -7 -t -7 -r 5 -D 1
 
 xset -b
 xset +fp /usr/share/fonts/artwiz-fonts
