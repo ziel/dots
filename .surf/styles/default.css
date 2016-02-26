@@ -1,0 +1,14 @@
+html {
+  -webkit-filter: invert(100%);
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CCC;
+}
+
+
