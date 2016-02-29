@@ -1,0 +1,10 @@
+
+#Uzbl-core GtkScrollbar {
+  background-color: black;
+  -GtkRange-slider-width: 2;
+  -GtkRange-trough-border: 0;
+  -GtkScrollbar-has-backward-stepper: false;
+  -GtkScrollbar-has-forward-stepper: false;
+}
+
+
