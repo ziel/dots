@@ -184,6 +184,7 @@ myManageHook = composeOne
     ,  className =? "Vncviewer"                       -?> doFloat
     ,  className =? "Flashplayer"                     -?> doFloat
     ,  className =? "Exe"                             -?> doFloat
+    ,  className =? "mpv"                             -?> doFloat
     ,  isFullscreen                                   -?> doFloat
     ,  title =? "furxvt"                              -?> doFloat
     ,  title =? "fsmlurxvt"                           -?> doFloat
