@@ -99,6 +99,14 @@ alias ptx="pdftotext -nopgbrk -layout"
 # Depends: rsync
 alias cpr="rsync -av -f '- .*'"
 
+# Google a thing
+# Depends: surfraw
+alias srg="sr google"
+
+# Fix mtr
+# Depends: mtr
+alias mtr="TERM=linux-m mtr -t"
+
 # Goldielocs
 # Depends: goldielocs
 function goldielocs {
@@ -121,6 +129,14 @@ fi
 function fmsg {
     clear && echo "\n$@" | figlet -fslant && echo
 }
+
+# Wikipedia CLI
+# Depends: telnet
+alias wikipedia='telnet telnet.wmflabs.org'
+
+# Anon Wikipedia CLI
+# Depends: tor, socat
+alias awikipedia='socat - SOCKS4A:localhost:lgcjxm7fttkqi2zl.onion:23,socksport=9050'
 
 # -----------------------------------------
 # prompt and term title
@@ -201,3 +217,5 @@ date '+%H and %M'
 9 fortune
 echo
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
