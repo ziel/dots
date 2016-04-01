@@ -186,6 +186,7 @@ myManageHook = composeOne
     ,  className =? "Exe"                             -?> doFloat
     ,  className =? "mpv"                             -?> doFloat
     ,  isFullscreen                                   -?> doFloat
+    ,  title =? "qiv"                                 -?> doFloat
     ,  title =? "furxvt"                              -?> doFloat
     ,  title =? "fsmlurxvt"                           -?> doFloat
     ,  resource  =? "Adobe"                           -?> doFloat
