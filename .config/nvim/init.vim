@@ -119,8 +119,8 @@ let g:go_fmt_command = "goimports"
 
 " platform-specific configs
 if has('macunix')
-  source .config/nvim/init.osx.vim
+  source $HOME/.config/nvim/init.osx.vim
 elseif has("unix")
-  source .config/nvim/init.linux.vim
+  source $HOME/.config/nvim/init.linux.vim
 endif
 
