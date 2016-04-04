@@ -66,7 +66,8 @@ filetype indent on
 " colors & look
 colorscheme elflord
 hi FoldColumn           ctermfg=2   ctermbg=235   cterm=none
-hi Search               ctermfg=3   ctermbg=0     cterm=none
+hi Search               ctermfg=4   ctermbg=232   cterm=none
+hi IncSearch            ctermfg=1   ctermbg=232   cterm=none
 hi VertSplit            ctermfg=0   ctermbg=233   cterm=none
 hi StatusLine           ctermfg=1   ctermbg=233   cterm=none
 hi StatusLineNC         ctermfg=11  ctermbg=233   cterm=none
