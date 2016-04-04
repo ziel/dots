@@ -97,6 +97,9 @@ nmap <silent> <leader>D <Plug>DashGlobalSearch
 nmap <leader><tab> :History<CR>
 nmap <leader>/ :Files<CR>
 
+" term escape
+tnoremap <Esc><Esc> <C-\><C-n>
+
 " quick filetype hacks for tabs vs spaces
 au FileType *    set expandtab|set tabstop=2|set shiftwidth=2|set softtabstop=2
 au FileType go   set noexpandtab|set tabstop=4|set shiftwidth=4|set softtabstop=4
