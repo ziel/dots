@@ -139,6 +139,35 @@ alias wikipedia='telnet telnet.wmflabs.org'
 alias awikipedia='socat - SOCKS4A:localhost:lgcjxm7fttkqi2zl.onion:23,socksport=9050'
 
 # -----------------------------------------
+# fuzzy search via fzf
+#
+# Depends: fzf
+# -----------------------------------------
+
+# FZF Additions
+. /etc/profile.d/fzf.zsh
+
+# Extra Keybindings
+if [[ $- == *i* ]]; then
+
+  # Goldielocs + FZF
+  # Depends: goldielocs, fzf
+  fzf-goldielocs-widget() {
+    local result=$(cat $(goldielocs file) | fzf | awk '{print $2}')
+
+    if [ ! -z "${result}" ]; then
+      cd "${result}"
+    fi
+
+    zle reset-prompt
+  }
+
+  zle -N fzf-goldielocs-widget
+  bindkey '\e/' fzf-goldielocs-widget
+
+fi
+
+# -----------------------------------------
 # prompt and term title
 # -----------------------------------------
 function title {
@@ -169,10 +198,9 @@ export PROMPT="%# "
 unset LS_COLORS
 
 export AWT_TOOLKIT=MToolkit
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=/usr/bin/less
 export MYSQL_PS1='\n\D\n\u@\h [\d]> '
-export LESSEDIT=vim
 export LESS='-R -S -F -X -P %lt/%m (%p/100)'
 
 export PATH=$PATH:$HOME/bin

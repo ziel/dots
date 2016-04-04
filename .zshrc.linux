@@ -46,19 +46,3 @@ if which synclient > /dev/null; then
     alias trackoff='synclient TouchpadOff=1'
 fi
 
-# fzf additions
-. /etc/profile.d/fzf.zsh
-
-# goldielocs + fzf
-fzf-goldielocs-widget() {
-  local result=$(cat $(goldielocs file) | fzf | awk '{print $2}')
-
-  if [ ! -z "${result}" ]; then
-    cd "${result}"
-  fi
-
-  zle reset-prompt
-}
-
-zle -N fzf-goldielocs-widget
-bindkey '^N' fzf-goldielocs-widget
