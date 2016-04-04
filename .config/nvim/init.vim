@@ -72,6 +72,8 @@ hi StatusLine           ctermfg=1   ctermbg=233   cterm=none
 hi StatusLineNC         ctermfg=11  ctermbg=233   cterm=none
 hi LineNr               ctermbg=235
 hi Comment              ctermfg=243
+hi TermCursor           ctermfg=2   ctermbg=232  cterm=none
+hi CursorLine                       ctermbg=234  cterm=none
 
 set fillchars=fold:-
 
