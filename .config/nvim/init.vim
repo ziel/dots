@@ -74,6 +74,7 @@ hi LineNr               ctermbg=235
 hi Comment              ctermfg=243
 hi TermCursor           ctermfg=2   ctermbg=232  cterm=none
 hi CursorLine                       ctermbg=234  cterm=none
+hi MatchParen           ctermfg=13  ctermbg=233  cterm=none
 
 set fillchars=fold:-
 
