@@ -138,6 +138,10 @@ alias wikipedia='telnet telnet.wmflabs.org'
 # Depends: tor, socat
 alias awikipedia='socat - SOCKS4A:localhost:lgcjxm7fttkqi2zl.onion:23,socksport=9050'
 
+# Always nvim
+# Depends: nvim
+alias vim=nvim
+
 # -----------------------------------------
 # fuzzy search via fzf
 #
