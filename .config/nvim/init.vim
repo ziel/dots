@@ -44,7 +44,6 @@ call plug#end()
 syntax on
 set hidden
 set autochdir
-set nocompatible
 set hlsearch
 set incsearch
 set nu
